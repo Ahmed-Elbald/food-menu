@@ -107,7 +107,7 @@ img {
 }
 .aside-cont {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     gap: 25px;
 }
 .aside-cont h2 {
@@ -238,15 +238,15 @@ section > .dishes-cont > div > .dish-details span.red {
 @media (max-width: 450px) {
     section > .dishes-cont > div {
         font-size: .8rem;
-        height: 320px;
+        display: block;
+        height: max-content;
     }
     section .img-cont-section {
-        display: flex;
-        align-items: center;
+        height: 200px;
     }
     section > .dishes-cont > div .img-cont-section img {
-        height: 70%;
-        border-radius: 10px;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
     }
 }
 section .pages-number {
@@ -261,11 +261,13 @@ section .pages-number span {
     border-radius: 50%;
     border: 1px solid gray;
     transition-duration: .5s;
-    font-size: 1.4rem;
     cursor: pointer;
 }
 section .pages-number span:hover {
     background-color: var(--iden);
+    color: white;
+}
+section .pages-number span:hover i {
     color: white;
 }
 footer > .sub {
